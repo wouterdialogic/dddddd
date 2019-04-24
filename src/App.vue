@@ -1,8 +1,7 @@
 <template>
   <div id="app" @click="calculate_v($event)">
     
-    <div class="container mx-auto">
-
+    <div class="container mx-auto p-2">
 
       <BannerComponent
         background_image_url="header"
@@ -23,16 +22,19 @@
       <HeaderComponent 
         header="Introductie"
         header_classes=""
-        paragraph="Het CBB ondersteunt bij het informatiemanagement van de ROS-organisaties. Op deze manier kunnen ROS’en voor informatiemanagement binnen zorgprojecten gebruik maken van gezamenlijk ontwikkelde kennis en tools. In het blok hieronder staat een overzicht van tools die ontwikkeld zijn om ROS-adviseurs te helpen met informatiemanagement."
+        paragraph="CBB (Coöperatieve Basiszorg in de Buurt) ondersteunt informatiemanagement van de ROS-organisaties in eerstelijnszorg en het sociaal domein in Nederland. Daarbij staat een wijkgerichte en populatiegerichte aanpak centraal. CBB fungeert als kenniscentrum en aanjager van vernieuwing en helpt de ROS’en informatiemanagement professioneel toe te passen in zorgprojecten en -programma’s. 
+        <br><br>
+        In het blok hieronder staat een overzicht van tools die ontwikkeld zijn om ROS-adviseurs te helpen bij informatiemanagement.
+"
         paragraph_classes=""
 
-        button_paragraph="Bent u benieuwd wat ROS-organisaties doen?"
+        button_paragraph="Bent u benieuwd wat ROS'en doen?"
         button_text="Naar het ROS-netwerk"
-        button_link="https://www.google.com"
+        button_link="https://www.ros-netwerk.nl/"
         
         button_paragraph2="Wilt u weten hoe ROS-adviseurs met informatiemanagement omgaan?"
         button_text2="Over de ROS-adviseur"
-        button_link2="https://www.google.com"
+        button_link2="/informatie"
        
         button_classes="bg-white hover:bg-grey-lightest py-2 px-2 mt-6 mr-2"
       ></HeaderComponent>
@@ -51,7 +53,7 @@
       <BlueThingComponent 
         :rows="rows"
         title="Toolbox"
-        intro_text="Onderstaande tools worden door ROS-adviseurs gebruikt om informatie te verzamelen<br>tijdens de verkenning en onderzoeksopzet van projecten"
+        intro_text="Onderstaande tools kunnen in verschillende projectfases worden ingezet. Voor de meeste zijn inloggegevens vereist. Heeft u geen inloggegevens en wilt u toch toegang tot de bronnen? Dan kunt u contact opnemen met het CBB."
       ></BlueThingComponent>
     
     </div> 
@@ -74,8 +76,6 @@
         :height="basic_spacer_height+'px'"
         :classes="basic_spacer_classes"
       />
-
-      <!-- {{v}} -->
 
       <div
         v-if="v.hidden"
@@ -142,7 +142,6 @@
 <script>
 import BannerComponent from './components/BannerComponent.vue'
 import HeaderComponent from './components/HeaderComponent.vue'
-// import CKeditorComponent from './components/CKeditorComponent.vue'
 import BlueThingComponent from './components/BlueThingComponent.vue'
 import FooterComponent from './components/FooterComponent.vue'
 import SpacerComponent from './components/SpacerComponent.vue'
@@ -152,7 +151,6 @@ export default {
   components: {
     BannerComponent,
     HeaderComponent,
-    // CKeditorComponent,
     BlueThingComponent,
     FooterComponent,
     SpacerComponent,
@@ -201,6 +199,20 @@ export default {
               url: "https://diadashboard.nl/cbb-triple-aim/relevante-documenten",
               image_url: "Handboek.svg",
             },   
+            {
+              id: 1,
+              text: "IM-dashboard",
+              long_text: "Bron over informatiemanagement binnen ROS-projecten. Inspiratiedatabank voor indicatoren en ervaring in meten.",
+              url: "https://diadashboard.nl/cbb_informatiemanagement",
+              image_url: "IM-dashboard.svg",
+            },
+            {
+              id: 2,
+              text: "IM-handboek",
+              long_text: "Handboek informatiemanagement. Een overzicht van de verzamelde inzichten in informatiemanagement voor de ROS.",
+              url: "https://diadashboard.nl/cbb-triple-aim/relevante-documenten",
+              image_url: "Handboek.svg",
+            },   
           ]
         },
         {
@@ -218,7 +230,7 @@ export default {
               id: 1,
               text: "ZOJP",
               long_text: "Projectendatabank met verschillende ROS projecten.",
-              url: "https://www.roswijkscan.nl/vaam/index.html",
+              url: "https://www.dejuistezorgopdejuisteplek.nl/",
               image_url: "ZOJP.svg",
             },
           ]

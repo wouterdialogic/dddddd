@@ -1,14 +1,14 @@
 <template>
   <div class="Header">
     <h1 class="my-5" :class="header_classes">{{header}}</h1>
-    <p :class="paragraph_classes">{{paragraph}}</p>
+    <p class="pr-8 sm:mr-1 lg:mr-32" :class="paragraph_classes" v-html="paragraph"></p>
 
-    <p class="mt-8" :class="paragraph_classes">{{button_paragraph}}</p>
+    <p class="mt-6" :class="paragraph_classes">{{button_paragraph}}</p>
     <a :href="button_link"><button class="border border-grey-light" :class="button_classes">
       {{button_text}}
     </button></a>
 
-    <p  class="mt-8" :class="paragraph_classes">{{button_paragraph2}}</p>
+    <p  class="mt-6" :class="paragraph_classes">{{button_paragraph2}}</p>
     <a :href="button_link2"><button class="border border-grey-light" :class="button_classes">
       {{button_text2}}
     </button></a>

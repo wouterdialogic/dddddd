@@ -1,10 +1,7 @@
 <template>
   <div class="hello">
     <h1 class="my-5">{{header}}</h1>
-   <ContactPersonComponent
-    
-   >
-     
+   <ContactPersonComponent>
    </ContactPersonComponent>
   </div>
 </template>

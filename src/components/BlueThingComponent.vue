@@ -11,11 +11,11 @@
             <div class="block bg-dia justify-center sm:block md:block sm:justify-center md:flex lg:flex " >
             
             <template v-for="item in row.items">
-              <div :key="item.id" class="mb-12 lg:w-1/4 hover:shadow-3 leftborder sm:block md:w-1/4 flex-item text-grey-darker text-center m-2 mx-8">
-              <a :href="item.url" class="bg-grey">
+              <div :key="item.id" class="mb-12 lg:w-1divide4 hover:shadow-3 leftborder sm:block md:w-1divide4 flex-item text-grey-darker text-center m-2 mx-8">
+              <a :href="item.url" class="bg-grey" target="_blank">
                 <div class="leftborder">
                   <div class="-mt-5">
-                    <img :alt="item.text" style="height: 160px;" :src="require('@/assets/img/'+item.image_url)" class="w-2/3 sm:w-2/3  md:w-full">
+                    <img :alt="item.text" style="height: 160px;" :src="require('@/assets/img/'+item.image_url)" class="w-2divide3 sm:w-2divide3  md:w-full">
                   </div>
 
                   <div >
